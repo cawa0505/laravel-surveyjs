@@ -7,7 +7,7 @@
 
 
 <script>
-    import * as SurveyEditor from 'survey-creator'
+    import 'survey-creator/survey-creator.js';
     import 'survey-creator/survey-creator.css';
 
     // import * as SurveyKo from "survey-knockout";
