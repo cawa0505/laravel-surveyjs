@@ -36,7 +36,7 @@ class Survey extends Model
 
                 $number = intval(end($pieces));
 
-                $survey->slug .= '-'.($number + 1);
+                $survey->slug .= '-' . ($number + 1);
             }
         });
     }
