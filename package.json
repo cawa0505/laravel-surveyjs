@@ -17,8 +17,7 @@
     "laravel-mix": "^4.0",
     "vue": "^2.5.17",
     "survey-vue": "^1.1.17",
-    "surveyjs-editor": "^1.0.95",
-    "survey-knockout": "^1.0.22"
+    "survey-creator": "^1.1.17"
   },
   "dependencies": {
     "surveyjs-widgets": "^1.1.17",
