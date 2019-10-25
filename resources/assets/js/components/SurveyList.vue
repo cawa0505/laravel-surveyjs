@@ -130,6 +130,7 @@
                     .then((response) => {
                         if(response.status === 200) {
                             this.surveys = response.data.data;
+                            console.info(this.surveys);
                             this.pageLength = Math.ceil(response.data.meta.total / response.data.meta.per_page);
                             this.loading = false;
                         }
