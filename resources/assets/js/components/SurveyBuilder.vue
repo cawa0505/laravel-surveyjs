@@ -10,7 +10,7 @@
     import * as SurveyEditor from 'survey-creator'
     import 'survey-creator/survey-creator.css';
 
-    import * as SurveyKo from "survey-knockout";
+    // import * as SurveyKo from "survey-knockout";
     import * as widgets from "surveyjs-widgets";
 
     Object.filter = (obj, predicate) =>
