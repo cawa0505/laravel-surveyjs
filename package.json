@@ -11,17 +11,28 @@
   },
   "devDependencies": {
     "axios": "^0.19",
+    "babel-loader": "^8.0.6",
     "bootstrap": "^3.4.1",
-    "popper.js": "^1.12",
-    "cross-env": "^5.1",
+    "cross-env": "^5.2.1",
     "laravel-mix": "^4.0",
-    "vue": "^2.5.17",
+    "popper.js": "^1.16.0",
+    "survey-creator": "^1.1.17",
+    "survey-knockout": "^1.1.17",
     "survey-vue": "^1.1.17",
-    "survey-creator": "^1.1.17"
+    "vue": "^2.5.17",
+    "vue-template-compiler": "^2.6.10"
   },
   "dependencies": {
+    "css-loader": "^3.2.0",
+    "node-sass": "^4.13.0",
+    "postcss-loader": "^3.0.0",
+    "sass": "^1.23.1",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.0.0",
     "surveyjs-widgets": "^1.1.17",
-    "vue-router": "^3.0.1",
-    "vuetify": "^2.1.6"
+    "vue-loader": "^15.7.1",
+    "vue-router": "^3.1.3",
+    "vuetify": "^2.1.6",
+    "webpack": "^4.41.2"
   }
 }

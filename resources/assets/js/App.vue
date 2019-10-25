@@ -5,7 +5,7 @@
                 <v-toolbar-title>Survey Manager</v-toolbar-title>
             </v-toolbar>
             <v-layout row pb-2>
-                <v-flex xs8 offset-xs2>
+                <v-flex xs10 offset-xs2>
                     <v-card class="card--flex-toolbar">
                         <v-card-text>
                             <router-view></router-view>

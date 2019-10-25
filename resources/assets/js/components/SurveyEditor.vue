@@ -10,9 +10,9 @@
                 <v-text-field
                         v-model="surveyName"
                         :rules="[
-                                            () => !!surveyName || 'The field name is required',
-                                            () => !!surveyName && surveyName.length >= 3 || 'Name must contain at least 3 character!',
-                                            ]"
+                                    () => !!surveyName || 'The field name is required',
+                                    () => !!surveyName && surveyName.length >= 3 || 'Name must contain at least 3 character!',
+                                ]"
                 ></v-text-field>
             </v-flex>
             <v-toolbar-items v-if="nameField">

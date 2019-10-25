@@ -7,8 +7,8 @@
 
 
 <script>
-    import * as SurveyEditor from 'surveyjs-editor'
-    import 'surveyjs-editor/surveyeditor.css';
+    import * as SurveyEditor from 'survey-creator'
+    import 'survey-creator/survey-creator.css';
 
     import * as SurveyKo from "survey-knockout";
     import * as widgets from "surveyjs-widgets";
