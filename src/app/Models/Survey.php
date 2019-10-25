@@ -25,7 +25,8 @@ class Survey extends Model
         parent::boot();
 
         static::creating(function ($survey) {
-            $survey->slug = str_slug($survey->name);
+            // $survey->slug = str_slug($survey->name);
+            $survey->slug = pinyin_slug($survey->name, ['split' => 'phrase']);
 
             $latestSlug = static::whereRaw("slug = '$survey->slug' or slug LIKE '$survey->slug-%'")
                                 ->latest('id')
