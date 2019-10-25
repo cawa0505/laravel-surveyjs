@@ -7,10 +7,12 @@
 
 
 <script>
-    import 'survey-creator/survey-creator.js';
-    import 'survey-creator/survey-creator.css';
+    import * as SurveyCreator from "survey-creator";
+    import "survey-creator/survey-creator.css";
 
     // import * as SurveyKo from "survey-knockout";
+    import * as SurveyVue from 'survey-vue'
+    const Survey = SurveyVue.Survey
     import * as widgets from "surveyjs-widgets";
 
     Object.filter = (obj, predicate) =>
@@ -21,7 +23,7 @@
     const widgetsList = Object.filter(SurveyConfig.widgets, widget => widget === true);
 
     Object.keys(widgetsList).forEach(function (widget) {
-        widgets[widget](SurveyKo);
+        widgets[widget](SurveyVue);
     });
 
     export default {
@@ -35,8 +37,8 @@
         },
         mounted () {
             let editorOptions = SurveyConfig.builder;
-            SurveyEditor.StylesManager.applyTheme(SurveyConfig.builder.theme);
-            this.editor = new SurveyEditor.SurveyEditor('surveyEditorContainer', editorOptions);
+            SurveyCreator.StylesManager.applyTheme(SurveyConfig.builder.theme);
+            this.editor = new SurveyCreator.SurveyCreator('surveyEditorContainer', editorOptions);
             this.editor.text = JSON.stringify(this.surveyData);
             let self = this;
             this.editor.saveSurveyFunc = function () {
