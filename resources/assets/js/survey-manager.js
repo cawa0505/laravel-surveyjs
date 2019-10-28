@@ -12,6 +12,12 @@ Vue.use(Vuetify);
 
 Vue.component("survey-show", "./components/SurveyShow.vue");
 
+const opts = {
+    icons: {
+        iconfont: 'md', // default - only for display purposes
+    },
+};
+
 new Vue({
   router,
   data() {
@@ -20,6 +26,6 @@ new Vue({
       snackbarMsg: ""
     };
   },
-  vuetify: new Vuetify(),
+  vuetify: new Vuetify(opts),
   render: h => h(App)
 }).$mount("#survey-manager");

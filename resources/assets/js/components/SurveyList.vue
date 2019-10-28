@@ -3,7 +3,7 @@
         <v-toolbar>
             <v-toolbar-title>List of all available surveys</v-toolbar-title>
             <v-spacer></v-spacer>
-            <v-dialog flat v-model="dialog" max-width="500px" content-class="remove-overflow">
+            <v-dialog text v-model="dialog" max-width="500px" content-class="remove-overflow">
                 <template v-slot:activator="{ on }"><v-btn v-on="on" color="primary" dark class="mb-2">New Survey</v-btn></template>
                 <v-card>
                     <v-card-title>
@@ -42,10 +42,12 @@
                 hide-default-footer
                 class="elevation-1"
         >
-            <template slot="items" slot-scope="props">
+            <template v-slot:items="props">
                 <td class="text-sm-left">{{ props.item.id }}</td>
                 <td class="text-sm-left">{{ props.item.name }}</td>
                 <td class="text-sm-left">{{ props.item.created_at }}</td>
+            </template>
+            <template v-slot:item.action="{ item }">
                 <td class="justify-center layout px-0">
                     <v-btn icon class="mx-0" @click="runSurvey(props.item.slug)">
                         <v-icon color="teal">play_circle_outline</v-icon>
@@ -96,7 +98,7 @@
                     },
                     {
                         text: 'Created date',
-                        valie: 'created_at',
+                        value: 'created_at',
                         sortable: false
                     },
                     {
@@ -130,7 +132,7 @@
                     .then((response) => {
                         if(response.status === 200) {
                             this.surveys = response.data.data;
-                            console.info(this.surveys);
+                            console.info(response.data.data);
                             this.pageLength = Math.ceil(response.data.meta.total / response.data.meta.per_page);
                             this.loading = false;
                         }

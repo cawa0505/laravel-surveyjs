@@ -14,7 +14,6 @@ class SurveyController extends Controller
     public function runSurvey($slug)
     {
         $survey = Survey::where('slug', $slug)->firstOrFail();
-
         return view('survey-manager::survey', [
             'survey'    =>  $survey,
         ]);

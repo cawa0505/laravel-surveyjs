@@ -95,7 +95,7 @@
                     },
                     {
                         text: 'Created date',
-                        valie: 'created_at',
+                        value: 'created_at',
                         sortable: false
                     },
                     {
